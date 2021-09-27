@@ -14,7 +14,7 @@ const ProjectList = [
         title: "NORP",
         tagline: "Media center for non-profit organization data",
         site: "http://norp.cc.gatech.edu/",
-        tech: ["React", "Djando", "Metabase"]
+        tech: ["React", "Djando", "Metabase"],
     },
     {
         title: "Online Solitaire",
@@ -50,6 +50,18 @@ const ProjectList = [
     },
 ];
 
+const TechUrls = {
+    "React": "https://reactjs.org/",
+    "Django": "https://www.djangoproject.com/",
+    "Metabase": "https://www.metabase.com/",
+    "MongoDB": "https://www.mongodb.com/",
+    "Nodejs": "https://nodejs.org/",
+    "AWS": "https://aws.amazon.com/",
+    "Golang": "https://golang.org/",
+    "MATLAB": "https://www.mathworks.com/products/matlab.html",
+    "InfluxDB": "https://www.influxdata.com/"
+}
+
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     color: "theme.palette.text.primary",
@@ -67,26 +79,50 @@ const TechstackIcon = styled('img')({
     height: 30,
 })
 
-export const Projects = () => {
+const IconButtonWithPopper = ({popperText, iconSrc, href, placement}) =>{
     const [anchorEl, setAnchorEl] = useState(null);
     const [open, setOpen] = useState(false);
-    const [text, setText] = useState("");
 
-    const onMouseOver = (text) => (event) => {
+    const onMouseOver = (event) => {
         setAnchorEl(event.currentTarget);
         setOpen(true);
-        setText(text);
     }
 
     const onMouseLeave = () => {
         setAnchorEl(null);
         setOpen(false);
-        setText("");
     }
-    
+
     return(
         <>
-        <FlexPopper open={open} anchorEl={anchorEl} text={text} placement="bottom"/>
+        <FlexPopper 
+            open={open} 
+            anchorEl={anchorEl} 
+            text={popperText} 
+            placement={placement}/>
+        <IconButton
+            href={href}
+            onMouseOver={onMouseOver}
+            onMouseLeave={onMouseLeave}>
+            <TechstackIcon src={iconSrc}/>
+        </IconButton>
+        </>
+    )
+}
+
+const TechButton = ({tech}) => {
+    return(
+        <IconButtonWithPopper 
+            popperText={tech} 
+            iconSrc={`${tech}-icon.svg`}
+            href={TechUrls[tech]}
+            placement="bottom"/>
+    )
+}
+
+export const Projects = () => {    
+    return(
+        <>
         <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
             <Typography variant="h4" align="center" sx={{mb: 1}}>
                 <b>Projects</b>
@@ -121,24 +157,9 @@ export const Projects = () => {
                         Media center for non-profit organization data
                     </Typography>
                     <Stack direction="row" sx={{mb: 1}}>
-                        <IconButton
-                            href="https://reactjs.org/"
-                            onMouseOver={onMouseOver("React")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/React-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            href="https://www.djangoproject.com/"
-                            onMouseOver={onMouseOver("Django")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/Django-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            href="https://www.metabase.com/"
-                            onMouseOver={onMouseOver("Metabase")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/Metabase-icon.svg"/>
-                        </IconButton>
+                        <TechButton tech="React"/>
+                        <TechButton tech="Django"/>
+                        <TechButton tech="Metabase"/>
                     </Stack>
                     </Grid>
                 </Item>
@@ -173,30 +194,10 @@ export const Projects = () => {
                         A web-based solitaire game with a user system
                     </Typography>
                     <Stack direction="row" sx={{mb: 1}}>
-                        <IconButton
-                            href="https://reactjs.org/"
-                            onMouseOver={onMouseOver("React")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/React-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            href="https://www.mongodb.com/"
-                            onMouseOver={onMouseOver("MongoDB")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/MongoDB-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            href="https://nodejs.org/en/"
-                            onMouseOver={onMouseOver("Nodejs")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/Nodejs-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            href="https://aws.amazon.com/"
-                            onMouseOver={onMouseOver("AWS")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/AWS-icon.svg"/>
-                        </IconButton>
+                        <TechButton tech="React"/>
+                        <TechButton tech="MongoDB"/>
+                        <TechButton tech="Nodejs"/>
+                        <TechButton tech="AWS"/>
                     </Stack>
                     </Grid>
                 </Item>
@@ -224,12 +225,7 @@ export const Projects = () => {
                         A toy compiler with hash tables and closures
                     </Typography>
                     <Stack direction="row" sx={{mb: 1}}>
-                        <IconButton
-                            href="https://golang.org/"
-                            onMouseOver={onMouseOver("Golang")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/Golang-icon.svg"/>
-                        </IconButton>
+                        <TechButton tech="Golang"/>
                     </Stack>
                     </Grid>
                 </Item>
@@ -264,18 +260,8 @@ export const Projects = () => {
                         Testing of a brain surface alignment algorithm
                     </Typography>
                     <Stack direction="row" sx={{mb: 1}}>
-                        <IconButton
-                            href="https://www.python.org/"
-                            onMouseOver={onMouseOver("Python")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/Python-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            href="https://www.mathworks.com/products/matlab.html"
-                            onMouseOver={onMouseOver("MATLAB")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/MATLAB-icon.svg"/>
-                        </IconButton>
+                        <TechButton tech="Python"/>
+                        <TechButton tech="MATLAB"/>
                     </Stack>
                     </Grid>
                 </Item>
@@ -303,18 +289,8 @@ export const Projects = () => {
                         Data analysis of traffic accidents in Nashville
                     </Typography>
                     <Stack direction="row" sx={{mb: 1}}>
-                        <IconButton
-                            href="https://www.python.org/"
-                            onMouseOver={onMouseOver("Python")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/Python-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            href="https://www.influxdata.com/"
-                            onMouseOver={onMouseOver("InfluxDB")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/InfluxDB-icon.svg"/>
-                        </IconButton>
+                        <TechButton tech="Python"/>
+                        <TechButton tech="InfluxDB"/>
                     </Stack>
                     </Grid>
                 </Item>
@@ -342,12 +318,7 @@ export const Projects = () => {
                         A Python clone of the classic retro arcade game
                     </Typography>
                     <Stack direction="row" sx={{mb: 1}}>
-                        <IconButton
-                            href="https://www.python.org/"
-                            onMouseOver={onMouseOver("Python")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/Python-icon.svg"/>
-                        </IconButton>
+                        <TechButton tech="Python"/>
                     </Stack>
                     </Grid>
                 </Item>
