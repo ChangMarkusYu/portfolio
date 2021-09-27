@@ -181,6 +181,8 @@ const BottomBar = () => {
                     <Stack direction="row" spacing={2} sx={{mr:5}}>
                         <Button 
                             href="https://reactjs.org/"
+                            target="_blank"
+                            rel="noreferrer"
                             variation="text" 
                             sx={{py:0}} 
                             color="inherit">
@@ -191,6 +193,8 @@ const BottomBar = () => {
                         </Button>
                         <Button 
                             href="https://github.com/ChangMarkusYu"
+                            target="_blank"
+                            rel="noreferrer"
                             variation="text" 
                             sx={{py:0}} 
                             color="inherit">
@@ -201,13 +205,15 @@ const BottomBar = () => {
                         </Button>
                         <Button 
                             href="https://www.netlify.com/"
+                            target="_blank"
+                            rel="noreferrer"
                             variation="text" 
                             sx={{py:0}} 
                             color="inherit">
                             <Typography variant="caption" sx={{mr:1}}>
                             Netlify
                             </Typography>
-                            <BottomLogo src="/netlify-icon.svg"/>
+                            <BottomLogo src="/Netlify-icon.svg"/>
                         </Button>
                     </Stack>
                 </Stack>

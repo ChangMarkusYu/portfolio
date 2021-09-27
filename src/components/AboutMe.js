@@ -69,6 +69,9 @@ export const AboutMe = () => {
                     aka begginer friendly.
                 </li>
                 <li>
+                    Add mobile support for this site.
+                </li>
+                <li>
                     Start a blog section on this site and write down my experience and
                     findings in my future journey in programming.
                 </li>

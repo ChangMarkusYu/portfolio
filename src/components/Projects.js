@@ -48,6 +48,12 @@ const ProjectList = [
         source: "https://github.com/ChangMarkusYu/SpaceInvaders",
         tech: ["Python"]
     },
+    {
+        title: "Portfolio Site",
+        tagline: "You are looking at it right now",
+        source: "https://github.com/ChangMarkusYu/portfolio",
+        tech: ["React", "MaterialUI", "Netlify"]
+    },
 ];
 
 const TechUrls = {
@@ -59,7 +65,8 @@ const TechUrls = {
     "AWS": "https://aws.amazon.com/",
     "Golang": "https://golang.org/",
     "MATLAB": "https://www.mathworks.com/products/matlab.html",
-    "InfluxDB": "https://www.influxdata.com/"
+    "InfluxDB": "https://www.influxdata.com/",
+    "Netlify": "https://www.netlify.com/"
 }
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -78,6 +85,8 @@ const ProjectItemButton = ({href, text}) => {
     return (
         <SquareButton 
             href={href}
+            target="_blank"
+            rel="noreferrer"
             variant="outlined" 
             color="inherit" 
             size="small">
