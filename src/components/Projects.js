@@ -66,6 +66,7 @@ const TechUrls = {
     "Golang": "https://golang.org/",
     "MATLAB": "https://www.mathworks.com/products/matlab.html",
     "InfluxDB": "https://www.influxdata.com/",
+    "MaterialUI": "https://mui.com/",
     "Netlify": "https://www.netlify.com/"
 }
 
