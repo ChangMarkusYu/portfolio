@@ -9,6 +9,47 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { FlexPopper } from "./UIFrame";
 
+const ProjectList = [
+    {
+        title: "NORP",
+        tagline: "Media center for non-profit organization data",
+        site: "http://norp.cc.gatech.edu/",
+        tech: ["React", "Djando", "Metabase"]
+    },
+    {
+        title: "Online Solitaire",
+        tagline: "A web-based solitaire game with a user system",
+        source: "https://github.com/vu-cs4288-20f/assignment6-ChangMarkusYu/",
+        site: "https://kyrosiberia.net/",
+        tech: ["React", "MongoDB", "Nodejs", "AWS"]
+    },
+    {
+        title: "Monkey Compiler",
+        tagline: "A toy compiler with hash tables and closures",
+        site: "https://github.com/ChangMarkusYu/monkey-lang/",
+        tech: ["Golang"]
+    },
+    {
+        title: "HSD Validation",
+        tagline: "Testing of a brain surface alignment algorithm",
+        writeup: "https://my.vanderbilt.edu/masi/2020/10/validation-of-group-wise-registration-for-surface-based-functional-mri-analysis/",
+        video:"https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11596/115961X/Validation-of-group-wise-registration-for-surface-based-functional-MRI/10.1117/12.2580771.short",
+        tech: ["Python", "MATLAB"]
+    },
+    {
+        title: "Emergency Response",
+        tagline: "Data analysis of traffic accidents in Nashville",
+        writeup: "https://www.dropbox.com/s/tol0j4505mx95yh/project_report_Chang_Yu_final.pdf?dl=0",
+        tech: ["Python", "InfluxDB"]
+    },
+    {
+        title: "Space Invaders",
+        tagline: "A Python clone of the classic retro arcade game",
+        source: "https://github.com/ChangMarkusYu/SpaceInvaders",
+        tech: ["Python"]
+    },
+];
+
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     color: "theme.palette.text.primary",
@@ -59,7 +100,7 @@ export const Projects = () => {
             justifyContent="center">
             <Grid item xs={8} md={4}>
                 <Item square>
-                <Grid 
+                    <Grid 
                         container 
                         direction="column" 
                         justify="center" 
@@ -84,19 +125,19 @@ export const Projects = () => {
                             href="https://reactjs.org/"
                             onMouseOver={onMouseOver("React")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/reactjs-icon.svg"/>
+                            <TechstackIcon src="/React-icon.svg"/>
                         </IconButton>
                         <IconButton
                             href="https://www.djangoproject.com/"
                             onMouseOver={onMouseOver("Django")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/django-logo.svg"/>
+                            <TechstackIcon src="/Django-icon.svg"/>
                         </IconButton>
                         <IconButton
                             href="https://www.metabase.com/"
                             onMouseOver={onMouseOver("Metabase")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/metabase-icon.svg"/>
+                            <TechstackIcon src="/Metabase-icon.svg"/>
                         </IconButton>
                     </Stack>
                     </Grid>
@@ -136,25 +177,25 @@ export const Projects = () => {
                             href="https://reactjs.org/"
                             onMouseOver={onMouseOver("React")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/reactjs-icon.svg"/>
+                            <TechstackIcon src="/React-icon.svg"/>
                         </IconButton>
                         <IconButton
                             href="https://www.mongodb.com/"
                             onMouseOver={onMouseOver("MongoDB")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/mongodb-icon.svg"/>
+                            <TechstackIcon src="/MongoDB-icon.svg"/>
                         </IconButton>
                         <IconButton
                             href="https://nodejs.org/en/"
                             onMouseOver={onMouseOver("Nodejs")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/nodejs-icon.svg"/>
+                            <TechstackIcon src="/Nodejs-icon.svg"/>
                         </IconButton>
                         <IconButton
                             href="https://aws.amazon.com/"
                             onMouseOver={onMouseOver("AWS")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/amazon_aws-icon.svg"/>
+                            <TechstackIcon src="/AWS-icon.svg"/>
                         </IconButton>
                     </Stack>
                     </Grid>
@@ -187,7 +228,7 @@ export const Projects = () => {
                             href="https://golang.org/"
                             onMouseOver={onMouseOver("Golang")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/golang-icon.svg"/>
+                            <TechstackIcon src="/Golang-icon.svg"/>
                         </IconButton>
                     </Stack>
                     </Grid>
@@ -227,18 +268,13 @@ export const Projects = () => {
                             href="https://www.python.org/"
                             onMouseOver={onMouseOver("Python")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/python-icon.svg"/>
+                            <TechstackIcon src="/Python-icon.svg"/>
                         </IconButton>
                         <IconButton
                             href="https://www.mathworks.com/products/matlab.html"
                             onMouseOver={onMouseOver("MATLAB")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/matlab-icon.svg"/>
-                        </IconButton>
-                        <IconButton
-                            onMouseOver={onMouseOver("Bash")}
-                            onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/bash-icon.svg"/>
+                            <TechstackIcon src="/MATLAB-icon.svg"/>
                         </IconButton>
                     </Stack>
                     </Grid>
@@ -271,13 +307,13 @@ export const Projects = () => {
                             href="https://www.python.org/"
                             onMouseOver={onMouseOver("Python")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/python-icon.svg"/>
+                            <TechstackIcon src="/Python-icon.svg"/>
                         </IconButton>
                         <IconButton
                             href="https://www.influxdata.com/"
                             onMouseOver={onMouseOver("InfluxDB")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/influxdata-logo.svg"/>
+                            <TechstackIcon src="/InfluxDB-icon.svg"/>
                         </IconButton>
                     </Stack>
                     </Grid>
@@ -310,7 +346,7 @@ export const Projects = () => {
                             href="https://www.python.org/"
                             onMouseOver={onMouseOver("Python")}
                             onMouseLeave={onMouseLeave}>
-                            <TechstackIcon src="/python-icon.svg"/>
+                            <TechstackIcon src="/Python-icon.svg"/>
                         </IconButton>
                     </Stack>
                     </Grid>
