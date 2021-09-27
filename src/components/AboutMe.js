@@ -21,7 +21,7 @@ export const AboutMe = () => {
         <Typography variant="h6" align="center" sx={{mb: 5}}>
             Student, Developer, Average Linux Fan
         </Typography>
-        <Typography variant="subtitle2" align="justify" sx={{mb:4}}>
+        <Typography variant="body1" align="justify" sx={{mb:4}}>
         I am a graduate student of the MSCS program of Georgia Institute of Technology. 
         I am interested in web development, software engineering, and operating systems.
         I am currently looking for internship opportunities in Summer 2022.
@@ -29,28 +29,28 @@ export const AboutMe = () => {
         <Typography variant="h5" align="left" sx={{my:2}}>
         <b>My skills</b>
         </Typography>
-        <Typography variant="subtitle2" align="left" sx={{mb:4}}>
-            <ul>
-                <Stack direction="column" spacing={1}>
-                <li>C/C++, Python, JavaScript, Java, MATLAB, x86 Assembly, Bash Script, HTML, CSS</li>
-                <li>React, Express, Django, MongoDB, SQL</li>
-                <li>Docker, AWS, Git, Linux</li>
-                </Stack>
-            </ul>
-        </Typography>
+        <ul>
+            <Stack direction="column" spacing={1}>
+                <Typography variant="body1" align="left" sx={{mb:4}}>
+                    <li>C/C++, Python, JavaScript, Java, MATLAB, x86 Assembly, HTML, CSS</li>
+                    <li>React, Express, Django, MongoDB, SQL</li>
+                    <li>Docker, AWS, Git, Linux</li>
+                </Typography>
+            </Stack>
+        </ul>
         <Typography variant="h5" align="left" sx={{my:2}}>
         <b>Publications</b>
         </Typography>
-        <Typography variant="subtitle2" align="left" sx={{mb:4}}>
-            <ul>
-                <li><b>Chang Yu</b>, Yue Liu, Leon Y. Cai, Cailey I. Kerley, Kaiwen Xu, 
-                    Warren D. Taylor, Hakmook Kang, Andrea T. Shafer, Lori L. 
-                    Beason-Held, Susan M. Resnick, Bennett A. Landman, Ilwoo Lyu. 
-                    <em> Validation of Group-wise Registration for Surface-based Functional 
-                    MRI Analysis</em>. <em><b>SPIE Medical Imaging, 2021</b></em>
-                </li>
-            </ul>
-        </Typography>
+        <ul>
+            <Typography variant="subtitle2" align="left" sx={{mb:4}}>
+            <li><b>Chang Yu</b>, Yue Liu, Leon Y. Cai, Cailey I. Kerley, Kaiwen Xu, 
+                Warren D. Taylor, Hakmook Kang, Andrea T. Shafer, Lori L. 
+                Beason-Held, Susan M. Resnick, Bennett A. Landman, Ilwoo Lyu. 
+                <em> Validation of Group-wise Registration for Surface-based Functional 
+                MRI Analysis</em>. <em><b>SPIE Medical Imaging, 2021</b></em>
+            </li>
+            </Typography>
+        </ul>
         <Stack direction="column" justify="center" alignItems="center">
             <MePhoto src="/workplace.jpg"/>
             <Typography variant="caption" align="center" sx={{mt:2}}>
@@ -58,11 +58,11 @@ export const AboutMe = () => {
             </Typography>
         </Stack>
         <Typography variant="h5" align="left" sx={{my:2}}>
-        <b>Future Plans</b>
+            <b>Future Plans</b>
         </Typography>
-        <Typography variant="subtitle2" align="left">
-            <ul>
+        <ul>
             <Stack direction="column" spacing={1}>
+            <Typography variant="body1" align="left">
                 <li>
                     Read up about <em>Godot</em> game engine, and try to contribute to the projects.
                     I plan to start by fixing issues tagged with "junior jobs" 
@@ -78,9 +78,9 @@ export const AboutMe = () => {
                 <li>
                     Survive GaTech and find a job
                 </li>
+            </Typography>
             </Stack>
-            </ul>
-        </Typography>
+        </ul>
         </Box>
         </>
     )
