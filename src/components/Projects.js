@@ -55,8 +55,9 @@ export const Projects = () => {
             </Typography>
         <Grid 
             container 
-            spacing={4}>
-            <Grid item xs={4}>
+            spacing={4}
+            justifyContent="center">
+            <Grid item xs={8} md={4}>
                 <Item square>
                 <Grid 
                         container 
@@ -101,7 +102,7 @@ export const Projects = () => {
                     </Grid>
                 </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={4}>
                 <Item square>
                     <Grid 
                         container 
@@ -159,7 +160,7 @@ export const Projects = () => {
                     </Grid>
                 </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={4}>
                 <Item square>
                 <Grid 
                         container 
@@ -192,7 +193,7 @@ export const Projects = () => {
                     </Grid>
                 </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={4}>
                 <Item square>
                 <Grid 
                         container 
@@ -243,7 +244,7 @@ export const Projects = () => {
                     </Grid>
                 </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={4}>
                 <Item square>
                 <Grid 
                         container 
@@ -282,7 +283,7 @@ export const Projects = () => {
                     </Grid>
                 </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={4}>
                 <Item square>
                 <Grid 
                         container 
