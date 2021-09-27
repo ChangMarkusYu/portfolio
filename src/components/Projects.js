@@ -55,7 +55,7 @@ export const Projects = () => {
             </Typography>
         <Grid 
             container 
-            spacing={2}>
+            spacing={4}>
             <Grid item xs={4}>
                 <Item square>
                 <Grid 
