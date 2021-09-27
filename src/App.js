@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import {BrowserRouter, Route} from "react-router-dom";
+import { UIFrame } from "./components/UIFrame";
+import { AboutMe } from "./components/AboutMe";
+import { Projects } from "./components/Projects"
+import { Home } from "./components/Home"
+import { Employment } from "./components/Employment"
+import { CssBaseline } from "@mui/material";
+import { DarkTheme, LightTheme } from "./components/Theme";
+import { ThemeProvider } from "@emotion/react";
+import { createTheme } from '@mui/material/styles';
 
-function App() {
+const App = () => {
+  const [dark, setDark] = useState(true);
+  const changeTheme = () => {
+    setDark(!dark);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <CssBaseline/>
+      <ThemeProvider theme={dark ? createTheme(DarkTheme) : createTheme(LightTheme)}>
+      <UIFrame changeTheme={changeTheme} dark={dark}/>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/me" component={AboutMe}/>
+      <Route exact path="/projects" component={Projects}/>
+      <Route exact path="/employment" component={Employment}/>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
