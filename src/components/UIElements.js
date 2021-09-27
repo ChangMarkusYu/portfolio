@@ -41,8 +41,8 @@ export const IconButtonWithPopper = ({popperText, IconComponent, iconSrc, href, 
             placement={placement}/>
         <IconButton
             href={href}
-            target="_blank"
-            rel="noreferrer"
+            target={href && "_blank"}
+            rel={href && "noreferrer"}
             onMouseOver={onMouseOver}
             onMouseLeave={onMouseLeave}>
             {iconSrc ? <IconComponent src={iconSrc}/> : <IconComponent/>}
