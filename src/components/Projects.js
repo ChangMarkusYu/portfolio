@@ -74,6 +74,18 @@ const SquareButton = styled(Button)({
     borderRadius: "0em",
 });
 
+const ProjectItemButton = ({href, text}) => {
+    return (
+        <SquareButton 
+            href={href}
+            variant="outlined" 
+            color="inherit" 
+            size="small">
+            {text}
+        </SquareButton>
+    )
+}
+
 const TechstackIcon = styled('img')({
     width: 30,
     height: 30,
@@ -102,6 +114,8 @@ const IconButtonWithPopper = ({popperText, iconSrc, href, placement}) =>{
             placement={placement}/>
         <IconButton
             href={href}
+            target="_blank"
+            rel="noreferrer"
             onMouseOver={onMouseOver}
             onMouseLeave={onMouseLeave}>
             <TechstackIcon src={iconSrc}/>
@@ -117,6 +131,40 @@ const TechButton = ({tech}) => {
             iconSrc={`${tech}-icon.svg`}
             href={TechUrls[tech]}
             placement="bottom"/>
+    )
+}
+
+const ProjectGridItem = ({project}) => {
+    return (
+        <Grid item xs={8} md={4}>
+            <Item square>
+                <Grid 
+                    container 
+                    direction="column" 
+                    justify="center" 
+                    alignItems="center">
+                <Typography variant="h6" align="center" sx={{my:2}}>
+                    <b>{project.title}</b>
+                </Typography>
+                <Stack direction="row" spacing={1} sx={{mb: 3}}>
+                    {project.source && <ProjectItemButton href={project.source} text="Source"/>}
+                    {project.site && <ProjectItemButton href={project.site} text="Site"/>}
+                    {project.writeup && <ProjectItemButton href={project.writeup} text="Writeup"/>}
+                    {project.video && <ProjectItemButton href={project.video} text="Video"/>}
+                </Stack>
+                <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
+                    {project.tagline}
+                </Typography>
+                <Stack direction="row" sx={{mb: 1}}>
+                    {
+                        project.tech.map((techName, i) => {
+                            <TechButton tech={techName} key={i}/>
+                        })
+                    }
+                </Stack>
+                </Grid>
+            </Item>
+        </Grid>
     )
 }
 
@@ -145,13 +193,9 @@ export const Projects = () => {
                         <b>NORP</b>
                     </Typography>
                     <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <SquareButton 
+                        <ProjectItemButton 
                             href="http://norp.cc.gatech.edu/"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Site
-                        </SquareButton>
+                            text="Site"/>
                     </Stack>
                     <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
                         Media center for non-profit organization data
@@ -175,20 +219,12 @@ export const Projects = () => {
                         <b>Online Solitaire</b>
                     </Typography>
                     <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <SquareButton 
+                        <ProjectItemButton 
                             href="https://github.com/vu-cs4288-20f/assignment6-ChangMarkusYu/"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Source
-                        </SquareButton>
-                        <SquareButton 
+                            text="Source"/>
+                        <ProjectItemButton 
                             href="https://kyrosiberia.net/"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Site
-                        </SquareButton>
+                            text="Site"/>
                     </Stack>
                     <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
                         A web-based solitaire game with a user system
@@ -213,13 +249,9 @@ export const Projects = () => {
                         <b>Monkey Compiler</b>
                     </Typography>
                     <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <SquareButton 
+                        <ProjectItemButton 
                             href="https://github.com/ChangMarkusYu/monkey-lang/"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Source
-                        </SquareButton>
+                            text="Source"/>
                     </Stack>
                     <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
                         A toy compiler with hash tables and closures
@@ -241,20 +273,12 @@ export const Projects = () => {
                         <b>HSD Validation</b>
                     </Typography>
                     <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <SquareButton 
+                        <ProjectItemButton 
                             href="https://my.vanderbilt.edu/masi/2020/10/validation-of-group-wise-registration-for-surface-based-functional-mri-analysis/"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Writeup
-                        </SquareButton>
-                        <SquareButton 
+                            text="Writeup"/>
+                        <ProjectItemButton 
                             href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11596/115961X/Validation-of-group-wise-registration-for-surface-based-functional-MRI/10.1117/12.2580771.short"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Video
-                        </SquareButton>
+                            text="Video"/>
                     </Stack>
                     <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
                         Testing of a brain surface alignment algorithm
@@ -277,13 +301,9 @@ export const Projects = () => {
                         <b>Emergency Response</b>
                     </Typography>
                     <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <SquareButton 
+                        <ProjectItemButton 
                             href="https://www.dropbox.com/s/tol0j4505mx95yh/project_report_Chang_Yu_final.pdf?dl=0"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Writeup
-                        </SquareButton>
+                            text="Writeup"/>
                     </Stack>
                     <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
                         Data analysis of traffic accidents in Nashville
@@ -306,13 +326,9 @@ export const Projects = () => {
                         <b>Space Invaders</b>
                     </Typography>
                     <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <SquareButton 
+                        <ProjectItemButton 
                             href="https://github.com/ChangMarkusYu/SpaceInvaders"
-                            variant="outlined" 
-                            color="inherit" 
-                            size="small">
-                            Source
-                        </SquareButton>
+                            text="Source"/>
                     </Stack>
                     <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
                         A Python clone of the classic retro arcade game

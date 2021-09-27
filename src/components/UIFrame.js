@@ -184,7 +184,7 @@ const BottomBar = () => {
                             <Typography variant="caption" sx={{mr:1}}>
                             React
                             </Typography>
-                            <BottomLogo src="/reactjs-icon.svg"/>
+                            <BottomLogo src="/React-icon.svg"/>
                         </Button>
                         <Button 
                             href="https://github.com/ChangMarkusYu"
