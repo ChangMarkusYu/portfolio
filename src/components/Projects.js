@@ -14,7 +14,7 @@ const ProjectList = [
         title: "NORP",
         tagline: "Media center for non-profit organization data",
         site: "http://norp.cc.gatech.edu/",
-        tech: ["React", "Djando", "Metabase"],
+        tech: ["React", "Django", "Metabase"],
     },
     {
         title: "Online Solitaire",
@@ -158,7 +158,7 @@ const ProjectGridItem = ({project}) => {
                 <Stack direction="row" sx={{mb: 1}}>
                     {
                         project.tech.map((techName, i) => {
-                            <TechButton tech={techName} key={i}/>
+                            return (<TechButton tech={techName} key={i}/>)
                         })
                     }
                 </Stack>
@@ -182,163 +182,11 @@ export const Projects = () => {
             container 
             spacing={4}
             justifyContent="center">
-            <Grid item xs={8} md={4}>
-                <Item square>
-                    <Grid 
-                        container 
-                        direction="column" 
-                        justify="center" 
-                        alignItems="center">
-                    <Typography variant="h6" align="center" sx={{my:2}}>
-                        <b>NORP</b>
-                    </Typography>
-                    <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <ProjectItemButton 
-                            href="http://norp.cc.gatech.edu/"
-                            text="Site"/>
-                    </Stack>
-                    <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
-                        Media center for non-profit organization data
-                    </Typography>
-                    <Stack direction="row" sx={{mb: 1}}>
-                        <TechButton tech="React"/>
-                        <TechButton tech="Django"/>
-                        <TechButton tech="Metabase"/>
-                    </Stack>
-                    </Grid>
-                </Item>
-            </Grid>
-            <Grid item xs={8} md={4}>
-                <Item square>
-                    <Grid 
-                        container 
-                        direction="column" 
-                        justify="center" 
-                        alignItems="center">
-                    <Typography variant="h6" align="center" sx={{my:2}}>
-                        <b>Online Solitaire</b>
-                    </Typography>
-                    <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <ProjectItemButton 
-                            href="https://github.com/vu-cs4288-20f/assignment6-ChangMarkusYu/"
-                            text="Source"/>
-                        <ProjectItemButton 
-                            href="https://kyrosiberia.net/"
-                            text="Site"/>
-                    </Stack>
-                    <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
-                        A web-based solitaire game with a user system
-                    </Typography>
-                    <Stack direction="row" sx={{mb: 1}}>
-                        <TechButton tech="React"/>
-                        <TechButton tech="MongoDB"/>
-                        <TechButton tech="Nodejs"/>
-                        <TechButton tech="AWS"/>
-                    </Stack>
-                    </Grid>
-                </Item>
-            </Grid>
-            <Grid item xs={8} md={4}>
-                <Item square>
-                <Grid 
-                        container 
-                        direction="column" 
-                        justify="center" 
-                        alignItems="center">
-                    <Typography variant="h6" align="center" sx={{my:2}}>
-                        <b>Monkey Compiler</b>
-                    </Typography>
-                    <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <ProjectItemButton 
-                            href="https://github.com/ChangMarkusYu/monkey-lang/"
-                            text="Source"/>
-                    </Stack>
-                    <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
-                        A toy compiler with hash tables and closures
-                    </Typography>
-                    <Stack direction="row" sx={{mb: 1}}>
-                        <TechButton tech="Golang"/>
-                    </Stack>
-                    </Grid>
-                </Item>
-            </Grid>
-            <Grid item xs={8} md={4}>
-                <Item square>
-                <Grid 
-                        container 
-                        direction="column" 
-                        justify="center" 
-                        alignItems="center">
-                    <Typography variant="h6" align="center" sx={{my:2}}>
-                        <b>HSD Validation</b>
-                    </Typography>
-                    <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <ProjectItemButton 
-                            href="https://my.vanderbilt.edu/masi/2020/10/validation-of-group-wise-registration-for-surface-based-functional-mri-analysis/"
-                            text="Writeup"/>
-                        <ProjectItemButton 
-                            href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11596/115961X/Validation-of-group-wise-registration-for-surface-based-functional-MRI/10.1117/12.2580771.short"
-                            text="Video"/>
-                    </Stack>
-                    <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
-                        Testing of a brain surface alignment algorithm
-                    </Typography>
-                    <Stack direction="row" sx={{mb: 1}}>
-                        <TechButton tech="Python"/>
-                        <TechButton tech="MATLAB"/>
-                    </Stack>
-                    </Grid>
-                </Item>
-            </Grid>
-            <Grid item xs={8} md={4}>
-                <Item square>
-                <Grid 
-                        container 
-                        direction="column" 
-                        justify="center" 
-                        alignItems="center">
-                    <Typography variant="h6" align="center" sx={{my:2}}>
-                        <b>Emergency Response</b>
-                    </Typography>
-                    <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <ProjectItemButton 
-                            href="https://www.dropbox.com/s/tol0j4505mx95yh/project_report_Chang_Yu_final.pdf?dl=0"
-                            text="Writeup"/>
-                    </Stack>
-                    <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
-                        Data analysis of traffic accidents in Nashville
-                    </Typography>
-                    <Stack direction="row" sx={{mb: 1}}>
-                        <TechButton tech="Python"/>
-                        <TechButton tech="InfluxDB"/>
-                    </Stack>
-                    </Grid>
-                </Item>
-            </Grid>
-            <Grid item xs={8} md={4}>
-                <Item square>
-                <Grid 
-                        container 
-                        direction="column" 
-                        justify="center" 
-                        alignItems="center">
-                    <Typography variant="h6" align="center" sx={{my:2}}>
-                        <b>Space Invaders</b>
-                    </Typography>
-                    <Stack direction="row" spacing={1} sx={{mb: 3}}>
-                        <ProjectItemButton 
-                            href="https://github.com/ChangMarkusYu/SpaceInvaders"
-                            text="Source"/>
-                    </Stack>
-                    <Typography variant="body1" align="center" sx={{mb: 1, mx: 2}}>
-                        A Python clone of the classic retro arcade game
-                    </Typography>
-                    <Stack direction="row" sx={{mb: 1}}>
-                        <TechButton tech="Python"/>
-                    </Stack>
-                    </Grid>
-                </Item>
-            </Grid>
+            {
+                ProjectList.map((project, i) => {
+                    return (<ProjectGridItem project={project} key={i}/>)
+                })
+            }
         </Grid>
         </Box>   
         </>
