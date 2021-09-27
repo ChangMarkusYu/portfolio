@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Drawer from '@mui/material/Drawer';
 import SaveIcon from '@mui/icons-material/Save';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
-import WorkIcon from '@mui/icons-material/Work';
 import HomeIcon from '@mui/icons-material/Home';
 import Popper from '@mui/material/Popper';
 import Typography from '@mui/material/Typography';
@@ -19,12 +18,12 @@ import Button from '@mui/material/Button';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { useHistory } from "react-router-dom";
 
-const SideBarPopper = ({open, anchorEl, text}) => {
+export const FlexPopper = ({open, anchorEl, text, placement}) => {
     return (
         <Popper 
             open={open} 
             anchorEl={anchorEl} 
-            placement="right"
+            placement={placement}
             style={{zIndex: 2000}}>
             <Paper>
                 <Typography sx={{px:2, py:1}}>{text}</Typography>
@@ -59,7 +58,7 @@ const SideBar = () => {
 
     return (
         <>
-        <SideBarPopper open={open} anchorEl={anchorEl} text={text}/>
+        <FlexPopper open={open} anchorEl={anchorEl} text={text} placement="right"/>
         <Drawer variant="permanent" anchor="left">
         <Stack spacing={2} sx={{mt:2, flexGrow: 1}}>
             <IconButton
@@ -79,12 +78,6 @@ const SideBar = () => {
                 onMouseOver={onMouseOver("Projects")}
                 onMouseLeave={onMouseLeave}>
                 <ArchitectureIcon sx={{ fontSize: iconSize }}/>
-            </IconButton>
-            <IconButton 
-                onClick = {() => onClick("/employment")}
-                onMouseOver={onMouseOver("Employment")}
-                onMouseLeave={onMouseLeave}>
-                <WorkIcon sx={{ fontSize: iconSize }}/>
             </IconButton>
         </Stack>
         <Stack sx={{mb:2}}>

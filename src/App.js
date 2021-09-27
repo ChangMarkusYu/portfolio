@@ -4,7 +4,6 @@ import { UIFrame } from "./components/UIFrame";
 import { AboutMe } from "./components/AboutMe";
 import { Projects } from "./components/Projects"
 import { Home } from "./components/Home"
-import { Employment } from "./components/Employment"
 import { CssBaseline } from "@mui/material";
 import { DarkTheme, LightTheme } from "./components/Theme";
 import { ThemeProvider } from "@emotion/react";
@@ -24,7 +23,6 @@ const App = () => {
       <Route exact path="/" component={Home}/>
       <Route exact path="/me" component={AboutMe}/>
       <Route exact path="/projects" component={Projects}/>
-      <Route exact path="/employment" component={Employment}/>
       </ThemeProvider>
     </BrowserRouter>
   );

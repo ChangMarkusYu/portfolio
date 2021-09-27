@@ -73,11 +73,11 @@ const MyTimeLine = () => {
                     sx={{ m: 'auto 0' }}
                     align="right"
                     variant="body2">
-                    You are looking at it right now
+                    Built with Material UI
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
-                        <TimelineDot>
+                        <TimelineDot variant="outlined">
                             <ArchitectureIcon/>
                             </TimelineDot>
                     <TimelineConnector/>
@@ -98,7 +98,7 @@ const MyTimeLine = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
-                        <TimelineDot>
+                        <TimelineDot variant="outlined">
                             <SchoolIcon/>
                             </TimelineDot>
                     <TimelineConnector/>
@@ -127,7 +127,7 @@ const MyTimeLine = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
-                        <TimelineDot>
+                        <TimelineDot variant="outlined">
                             <SportsEsportsIcon/>
                             </TimelineDot>
                     <TimelineConnector/>
@@ -152,7 +152,7 @@ const MyTimeLine = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
-                        <TimelineDot>
+                        <TimelineDot variant="outlined">
                             <WorkIcon/>
                             </TimelineDot>
                     <TimelineConnector/>
@@ -177,7 +177,7 @@ const MyTimeLine = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
-                        <TimelineDot>
+                        <TimelineDot variant="outlined">
                             <BiotechIcon/>
                             </TimelineDot>
                     <TimelineConnector/>
@@ -202,7 +202,7 @@ const MyTimeLine = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
-                        <TimelineDot>
+                        <TimelineDot variant="outlined">
                             <SchoolIcon/>
                             </TimelineDot>
                     <TimelineConnector/>
