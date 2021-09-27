@@ -21,7 +21,7 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 export const Home = () => {
     return(
         <>
-        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
+        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"600px"}}>
         <Typography variant="h3" align="justify" sx={{mb: 3}}>
             <b>Hi, I'm Chang Yu.</b>
         </Typography>
@@ -34,6 +34,8 @@ export const Home = () => {
         <Stack direction="row" spacing={2} sx={{mt:3}} >
             <Button 
                 href="https://www.dropbox.com/s/8vd4jvhs3lq7ydt/CV_Chang%20Yu.pdf?dl=0"
+                target="_blank"
+                rel="noreferrer"
                 variant="outlined" 
                 color="inherit" 
                 sx={{px:1}}>
@@ -42,6 +44,8 @@ export const Home = () => {
             </Button>
             <Button 
                 href="https://github.com/ChangMarkusYu"
+                target="_blank"
+                rel="noreferrer"
                 variant="outlined"
                 color="inherit" 
                 sx={{px:1}}>
@@ -50,6 +54,8 @@ export const Home = () => {
             </Button>
             <Button 
                 href="https://www.linkedin.com/in/chang-yu-0a2a73157/"
+                target="_blank"
+                rel="noreferrer"
                 variant="outlined" 
                 color="inherit" 
                 sx={{px:1}}>

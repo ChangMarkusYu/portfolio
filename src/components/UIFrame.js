@@ -83,12 +83,16 @@ const SideBar = () => {
         <Stack sx={{mb:2}}>
             <IconButton 
                 href="https://github.com/ChangMarkusYu"
+                target="_blank"
+                rel="noreferrer"
                 onMouseOver={onMouseOver("GitHub")}
                 onMouseLeave={onMouseLeave}>
                 <GitHubIcon sx={{ fontSize: iconSize }}/>
             </IconButton>
             <IconButton 
                 href="https://www.linkedin.com/in/chang-yu-0a2a73157/"
+                target="_blank"
+                rel="noreferrer"
                 onMouseOver={onMouseOver("LinkedIn")}
                 onMouseLeave={onMouseLeave}>
                 <LinkedInIcon sx={{ fontSize: iconSize }}/>
@@ -120,7 +124,7 @@ const TopBar = ({changeTheme, dark}) => {
 
     return (
         <Header>
-        <Paper elevation={1} sx={{ml:3, pl: 5, py:1}} square>
+        <Paper elevation={1} sx={{pl: 8, py:1}} square>
             <Stack direction="row">
                 <Stack direction="row" spacing={2} sx={{flexGrow: 1}}>
                     <CodeIcon/>
@@ -158,7 +162,6 @@ const Footer = styled('div')({
     bottom: 0,
     flexGrow:1,
     width: "100%",
-    paddingLeft: 45,
     zIndex:1000
 });
 
@@ -170,7 +173,7 @@ const BottomLogo = styled('img')({
 const BottomBar = () => {
     return(
         <Footer>
-            <Paper square sx={{pl:2}} elevation={4}>
+            <Paper square sx={{pl:8}} elevation={4}>
                 <Stack direction="row">
                     <Typography variant="caption" sx={{flexGrow: 1}}>
                         Made by Chang Yu
