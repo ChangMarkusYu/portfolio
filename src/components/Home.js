@@ -1,5 +1,4 @@
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -21,47 +20,47 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
 export const Home = () => {
     return(
-        <Paper elevation={9} square sx={{pl:40, pt:7, flexGrow:1}}>
-            <Box sx={{pr: 47, mt: 5}}>
-            <Typography variant="h3" align="justify" sx={{mb: 3}}>
-                <b>Hi, I'm Chang Yu.</b>
-            </Typography>
-            <Typography variant="h6" align="justify">
-                I'm a <b>MSCS</b> student at <b>Georgia Tech</b>.
-                I enjoy full stack web development, building open source projects,
-                and playing around with Linux. My interets and skills span many
-                areas of software engineering.
-            </Typography>
-            <Stack direction="row" spacing={2} sx={{mt:3}} >
-                <Button 
-                    href="https://www.dropbox.com/s/8vd4jvhs3lq7ydt/CV_Chang%20Yu.pdf?dl=0"
-                    variant="outlined" 
-                    color="inherit" 
-                    sx={{px:1}}>
-                    <DownloadIcon sx={{mr:1}}/>
-                    Resume
-                </Button>
-                <Button 
-                    href="https://github.com/ChangMarkusYu"
-                    variant="outlined"
-                    color="inherit" 
-                    sx={{px:1}}>
-                    <GitHubIcon sx={{mr:1}}/>
-                    GitHub
-                </Button>
-                <Button 
-                    href="https://www.linkedin.com/in/chang-yu-0a2a73157/"
-                    variant="outlined" 
-                    color="inherit" 
-                    sx={{px:1}}>
-                    <LinkedInIcon sx={{mr:1}}/>
-                    LinkedIn
-                </Button>
-            </Stack>
-            <Typography variant="h4" sx={{mt: 8}}><b>My Timeline</b></Typography>
-            <MyTimeLine/>
-            </Box>
-        </Paper>
+        <>
+        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
+        <Typography variant="h3" align="justify" sx={{mb: 3}}>
+            <b>Hi, I'm Chang Yu.</b>
+        </Typography>
+        <Typography variant="h6" align="justify">
+            I'm a <b>MSCS</b> student at <b>Georgia Tech</b>.
+            I enjoy full stack web development, building open source projects,
+            and playing around with Linux. My interets and skills span many
+            areas of software engineering.
+        </Typography>
+        <Stack direction="row" spacing={2} sx={{mt:3}} >
+            <Button 
+                href="https://www.dropbox.com/s/8vd4jvhs3lq7ydt/CV_Chang%20Yu.pdf?dl=0"
+                variant="outlined" 
+                color="inherit" 
+                sx={{px:1}}>
+                <DownloadIcon sx={{mr:1}}/>
+                Resume
+            </Button>
+            <Button 
+                href="https://github.com/ChangMarkusYu"
+                variant="outlined"
+                color="inherit" 
+                sx={{px:1}}>
+                <GitHubIcon sx={{mr:1}}/>
+                GitHub
+            </Button>
+            <Button 
+                href="https://www.linkedin.com/in/chang-yu-0a2a73157/"
+                variant="outlined" 
+                color="inherit" 
+                sx={{px:1}}>
+                <LinkedInIcon sx={{mr:1}}/>
+                LinkedIn
+            </Button>
+        </Stack>
+        <Typography variant="h4" sx={{mt: 8}}><b>My Timeline</b></Typography>
+        <MyTimeLine/>
+        </Box>
+        </>
     )
 }
 
