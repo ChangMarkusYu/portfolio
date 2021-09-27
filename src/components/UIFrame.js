@@ -3,7 +3,6 @@ import Drawer from '@mui/material/Drawer';
 import SaveIcon from '@mui/icons-material/Save';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import HomeIcon from '@mui/icons-material/Home';
-import Popper from '@mui/material/Popper';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
@@ -17,20 +16,7 @@ import { styled } from "@mui/system";
 import Button from '@mui/material/Button';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { useHistory } from "react-router-dom";
-
-export const FlexPopper = ({open, anchorEl, text, placement}) => {
-    return (
-        <Popper 
-            open={open} 
-            anchorEl={anchorEl} 
-            placement={placement}
-            style={{zIndex: 2000}}>
-            <Paper>
-                <Typography sx={{px:2, py:1}}>{text}</Typography>
-            </Paper>
-        </Popper>
-    )
-}
+import { FlexPopper } from "./UIElements";
 
 const iconSize = 30;
 
@@ -170,7 +156,26 @@ const BottomLogo = styled('img')({
     height: 20,
 });
 
+const BottomBarIconButton = ({href, iconSrc, IconComponent, children}) => {
+    return (
+        <Button 
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            variation="text" 
+            sx={{py:0}} 
+            color="inherit">
+            <Typography variant="caption" sx={{mr:1}}>
+            {children}
+            </Typography>
+            {iconSrc ? <IconComponent src={iconSrc}/> : <IconComponent/>}
+        </Button>
+    )
+}
+
 const BottomBar = () => {
+    const GitHubIconSmall = () => <GitHubIcon fontSize="small"/>;
+
     return(
         <Footer>
             <Paper square sx={{pl:8}} elevation={4}>
@@ -179,42 +184,23 @@ const BottomBar = () => {
                         Made by Chang Yu
                     </Typography>
                     <Stack direction="row" spacing={2} sx={{mr:5}}>
-                        <Button 
-                            href="https://reactjs.org/"
-                            target="_blank"
-                            rel="noreferrer"
-                            variation="text" 
-                            sx={{py:0}} 
-                            color="inherit">
-                            <Typography variant="caption" sx={{mr:1}}>
+                        <BottomBarIconButton 
+                            href="https://reactjs.org/" 
+                            IconComponent={BottomLogo}
+                            iconSrc="/React-icon.svg">
                             React
-                            </Typography>
-                            <BottomLogo src="/React-icon.svg"/>
-                        </Button>
-                        <Button 
-                            href="https://github.com/ChangMarkusYu"
-                            target="_blank"
-                            rel="noreferrer"
-                            variation="text" 
-                            sx={{py:0}} 
-                            color="inherit">
-                            <Typography variant="caption" sx={{mr:1}}>
-                            Github
-                            </Typography>
-                            <GitHubIcon fontSize="small"/>
-                        </Button>
-                        <Button 
-                            href="https://www.netlify.com/"
-                            target="_blank"
-                            rel="noreferrer"
-                            variation="text" 
-                            sx={{py:0}} 
-                            color="inherit">
-                            <Typography variant="caption" sx={{mr:1}}>
+                        </BottomBarIconButton>
+                        <BottomBarIconButton 
+                            href="https://github.com/ChangMarkusYu" 
+                            IconComponent={GitHubIconSmall}>
+                            GitHub
+                        </BottomBarIconButton>
+                        <BottomBarIconButton 
+                            href="https://www.netlify.com/" 
+                            IconComponent={BottomLogo}
+                            iconSrc="/Netlify-icon.svg">
                             Netlify
-                            </Typography>
-                            <BottomLogo src="/Netlify-icon.svg"/>
-                        </Button>
+                        </BottomBarIconButton>
                     </Stack>
                 </Stack>
             </Paper>

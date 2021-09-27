@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,8 +6,7 @@ import Grid from '@mui/material/Grid';
 import { styled } from "@mui/system";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import { FlexPopper } from "./UIFrame";
+import { IconButtonWithPopper } from "./UIElements"
 
 const ProjectList = [
     {
@@ -101,43 +100,11 @@ const TechstackIcon = styled('img')({
     height: 30,
 })
 
-const IconButtonWithPopper = ({popperText, iconSrc, href, placement}) =>{
-    const [anchorEl, setAnchorEl] = useState(null);
-    const [open, setOpen] = useState(false);
-
-    const onMouseOver = (event) => {
-        setAnchorEl(event.currentTarget);
-        setOpen(true);
-    }
-
-    const onMouseLeave = () => {
-        setAnchorEl(null);
-        setOpen(false);
-    }
-
-    return(
-        <>
-        <FlexPopper 
-            open={open} 
-            anchorEl={anchorEl} 
-            text={popperText} 
-            placement={placement}/>
-        <IconButton
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            onMouseOver={onMouseOver}
-            onMouseLeave={onMouseLeave}>
-            <TechstackIcon src={iconSrc}/>
-        </IconButton>
-        </>
-    )
-}
-
 const TechButton = ({tech}) => {
     return(
         <IconButtonWithPopper 
             popperText={tech} 
+            IconComponent={TechstackIcon}
             iconSrc={`${tech}-icon.svg`}
             href={TechUrls[tech]}
             placement="bottom"/>
