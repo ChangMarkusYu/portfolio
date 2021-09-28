@@ -25,7 +25,7 @@ const ProjectList = [
     {
         title: "Monkey Compiler",
         tagline: "A toy compiler with hash tables and closures",
-        site: "https://github.com/ChangMarkusYu/monkey-lang/",
+        source: "https://github.com/ChangMarkusYu/monkey-lang/",
         tech: ["Golang"]
     },
     {
