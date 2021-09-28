@@ -10,7 +10,7 @@ import { IconButtonWithPopper } from "./UIElements"
 
 const ProjectList = [
     {
-        title: "NORP",
+        title: "NORP [In Progress]",
         tagline: "Media center for non-profit organization data",
         site: "http://norp.cc.gatech.edu/",
         tech: ["React", "Django", "Metabase"],
