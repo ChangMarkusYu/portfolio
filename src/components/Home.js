@@ -125,7 +125,9 @@ const MyTimeLine = () => {
                     <Typography variant="caption">
                         <a
                             style={{color: "inherit", textDecoration: "none"}}
-                            href="https://kyrosiberia.net/">
+                            href="https://kyrosiberia.net/"
+                            target="_blank"
+                            rel="noreferrer">
                             <u>https://kyrosiberia.net/</u>
                         </a>
                     </Typography>
@@ -177,7 +179,13 @@ const MyTimeLine = () => {
                     Research Assistant
                     <br/>
                     <Typography variant="caption">
-                        Published at SPIE 2021
+                        <a 
+                            style={{color: "inherit", textDecoration: "none"}}
+                            href="https://tinyurl.com/4unsf9tf"
+                            target="_blank"
+                            rel="noreferrer">
+                            <u>Paper</u>
+                        </a> published at SPIE 2021
                     </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
