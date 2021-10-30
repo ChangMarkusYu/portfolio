@@ -26,9 +26,9 @@ export const Home = () => {
             <b>Hi, I'm Chang Yu.</b>
         </Typography>
         <Typography variant="h6" align="justify">
-            I'm a <b>MSCS</b> student at <b>Georgia Tech</b>.
-            I enjoy full stack web development, building open source projects,
-            and playing around with Linux. My interets and skills span many
+            I'm a <b>MSCS</b> student at <b>Georgia Tech</b>. 
+            I enjoy full stack web development, building open-source projects,
+            and playing around with Linux. My interests and skills span many
             areas of software engineering.
         </Typography>
         <Stack direction="row" spacing={2} sx={{mt:3}} >
