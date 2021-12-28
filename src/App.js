@@ -1,9 +1,9 @@
 import { useState } from "react";
 import {BrowserRouter, Route} from "react-router-dom";
 import { UIFrame } from "./components/UIFrame";
-import { AboutMe } from "./components/AboutMe";
-import { Projects } from "./components/Projects"
-import { Home } from "./components/Home"
+import { AboutMe } from "./pages/AboutMe";
+import { Projects } from "./pages/Projects"
+import { Home } from "./pages/Home"
 import { CssBaseline } from "@mui/material";
 import { DarkTheme, LightTheme } from "./components/Theme";
 import { ThemeProvider } from "@emotion/react";

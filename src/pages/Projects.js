@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import { styled } from "@mui/system";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import { IconButtonWithPopper } from "./UIElements"
+import { IconButtonWithPopper } from "../components/UIElements"
 
 const ProjectList = [
     {
