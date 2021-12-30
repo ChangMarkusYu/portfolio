@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
-export const FlexPopper = ({open, anchorEl, text, placement}) => {
+const FlexPopper = ({open, anchorEl, text, placement}) => {
     return (
         <Popper 
             open={open} 
