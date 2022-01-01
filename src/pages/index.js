@@ -18,7 +18,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
-export const Home = () => {
+const Home = () => {
     return(
         <>
         <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"600px"}}>
@@ -230,3 +230,5 @@ const MyTimeLine = () => {
         </Timeline>
     )
 }
+
+export default Home;

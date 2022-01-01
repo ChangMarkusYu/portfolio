@@ -11,7 +11,7 @@ const MePhoto = styled('img')({
     marginRight: "auto",
 });
 
-export const AboutMe = () => {
+const AboutMe = () => {
     return(
         <>
         <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"600px"}}>
@@ -85,3 +85,5 @@ export const AboutMe = () => {
         </>
     )
 }
+
+export default AboutMe;

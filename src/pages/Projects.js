@@ -146,7 +146,7 @@ const ProjectGridItem = ({project}) => {
     )
 }
 
-export const Projects = () => {    
+const Projects = () => {    
     return(
         <>
         <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
@@ -170,3 +170,5 @@ export const Projects = () => {
         </>
     )
 }
+
+export default Projects;
