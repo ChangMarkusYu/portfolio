@@ -52,7 +52,7 @@ const ProjectList = [
         title: "Portfolio Site",
         tagline: "You are looking at it right now",
         source: "https://github.com/ChangMarkusYu/portfolio",
-        tech: ["React", "MaterialUI", "Netlify"]
+        tech: ["Gatsby", "MaterialUI", "Netlify"]
     },
 ];
 
@@ -67,7 +67,8 @@ const TechUrls = {
     "MATLAB": "https://www.mathworks.com/products/matlab.html",
     "InfluxDB": "https://www.influxdata.com/",
     "MaterialUI": "https://mui.com/",
-    "Netlify": "https://www.netlify.com/"
+    "Netlify": "https://www.netlify.com/",
+    "Gatsby": "https://www.gatsbyjs.com/",
 }
 
 const Item = styled(Paper)(({ theme }) => ({

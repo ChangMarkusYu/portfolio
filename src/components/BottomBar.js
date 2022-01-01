@@ -48,10 +48,10 @@ export const BottomBar = () => {
                     </Typography>
                     <Stack direction="row" spacing={2} sx={{mr:5}}>
                         <BottomBarIconButton 
-                            href="https://reactjs.org/" 
+                            href="https://www.gatsbyjs.com/" 
                             IconComponent={BottomLogo}
-                            iconSrc="/React-icon.svg">
-                            React
+                            iconSrc="/Gatsby-icon.svg">
+                            Gatsby
                         </BottomBarIconButton>
                         <BottomBarIconButton 
                             href="https://github.com/ChangMarkusYu" 
