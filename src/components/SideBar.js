@@ -50,11 +50,11 @@ export const SideBar = () => {
             <SideBarIconButton 
                 popperText="About me" 
                 IconComponent={SaveIcon} 
-                to="/me"/>
+                to="/AboutMe"/>
             <SideBarIconButton 
                 popperText="Projects" 
                 IconComponent={ArchitectureIcon} 
-                to="/projects"/>
+                to="/Projects"/>
         </Stack>
         <Stack sx={{mb:1}}>
             <SideBarIconButton 
