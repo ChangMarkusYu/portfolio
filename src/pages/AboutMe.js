@@ -53,7 +53,7 @@ const AboutMe = () => {
             </Typography>
         </ul>
         <Stack direction="column" justify="center" alignItems="center">
-            <MePhoto src="../images/workplace.jpg"/>
+            <MePhoto src="/workplace.jpg"/>
             <Typography variant="caption" align="center" sx={{mt:2}}>
                 <em>I don't have a selfie, so here is a picture of my workplace</em>
             </Typography>
