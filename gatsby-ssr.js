@@ -6,6 +6,7 @@ import { DarkTheme, LightTheme } from "./src/components/Theme";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import { root } from './src/components/layout.module.css'
 
 // Wraps every page in a component
 export function wrapRootElement({ element }) {
@@ -15,6 +16,7 @@ export function wrapRootElement({ element }) {
     }
 
     return (
+        <div className={root}>
         <CssBaseline>
             <ThemeProvider theme={dark ? createTheme(DarkTheme) : createTheme(LightTheme)}>
             <UIFrame changeTheme={changeTheme} dark={dark}/>
@@ -23,5 +25,6 @@ export function wrapRootElement({ element }) {
                 </Paper>
             </ThemeProvider>
         </CssBaseline>
+        </div>
     );
 }
