@@ -106,7 +106,7 @@ const TechButton = ({tech}) => {
         <IconButtonWithPopper 
             popperText={tech} 
             IconComponent={TechstackIcon}
-            iconSrc={`${tech}-icon.svg`}
+            iconSrc={`../images/${tech}-icon.svg`}
             href={TechUrls[tech]}
             placement="bottom"/>
     )

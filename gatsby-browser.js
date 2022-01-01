@@ -8,7 +8,7 @@ import { createTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
 // Wraps every page in a component
-export function wrapRootElement({ element }) {
+export const wrapRootElement = ({ element }) => {
     const [dark, setDark] = useState(true);
     const changeTheme = () => {
         setDark(!dark);
