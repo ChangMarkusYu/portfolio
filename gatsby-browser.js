@@ -1,8 +1,8 @@
 import React from "react"
 import { useState } from "react";
-import { UIFrame } from "./components/UIFrame";
+import { UIFrame } from "./src/components/UIFrame";
 import { CssBaseline } from "@mui/material";
-import { DarkTheme, LightTheme } from "./components/Theme";
+import { DarkTheme, LightTheme } from "./src/components/Theme";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
