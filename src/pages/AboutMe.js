@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { styled } from "@mui/system";
+import WorkplacePhoto from '../assets/workplace.jpg'
 
 const MePhoto = styled('img')({
     width: "80%",
@@ -53,7 +54,7 @@ const AboutMe = () => {
             </Typography>
         </ul>
         <Stack direction="column" justify="center" alignItems="center">
-            <MePhoto src="/workplace.jpg"/>
+            <MePhoto src={WorkplacePhoto}/>
             <Typography variant="caption" align="center" sx={{mt:2}}>
                 <em>I don't have a selfie, so here is a picture of my workplace</em>
             </Typography>
