@@ -22,7 +22,7 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 const Home = () => {
     return(
         <>
-        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"600px"}}>
+        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
         <Typography variant="h3" align="justify" sx={{mb: 3}}>
             <b>Hi, I'm Chang Yu.</b>
         </Typography>

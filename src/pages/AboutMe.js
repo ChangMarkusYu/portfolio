@@ -16,7 +16,7 @@ const MePhoto = styled('img')({
 const AboutMe = () => {
     return(
         <>
-        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"600px"}}>
+        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
         <Typography variant="h4" align="center" sx={{mb: 1}}>
             <b>About me</b>
         </Typography>
