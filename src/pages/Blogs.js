@@ -13,25 +13,32 @@ const Blogs = ({ data }) => {
         </Typography>
 
         <ul>
-        <Typography variant="body1" align="left">
         {
-            data.allFile.nodes.map(node => (
-            <li key={node.name}>
-                {node.name}
-            </li>
+            data.allMarkdownRemark.edges.map(({node}) => (
+                <article key={node.id}>
+                    <h2>{node.frontmatter.title}</h2>
+                    <p>Posted: {node.frontmatter.date}</p>
+                    <div dangerouslySetInnerHTML={{ __html: node.html }}/>
+                </article>
             ))
         }
-        </Typography>
         </ul>
         </>
     )
 }
 
 export const query = graphql`
-    query MyQuery {
-        allFile(filter: {name: {ne: ".git"}}) {
-            nodes {
-                name
+    query {
+        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM D, YYYY")
+                    }
+                    id
+                    html
+                }
             }
         }
     }
