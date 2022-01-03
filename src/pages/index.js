@@ -64,6 +64,12 @@ const Home = () => {
         </Stack>
         <Typography variant="h4" sx={{mt: 8}}><b>My Timeline</b></Typography>
         <MyTimeLine/>
+        <Typography variant="h5" sx={{mt: 8}}><b>Acknowledgement</b></Typography>
+        <Typography variant="body1" align="justify" sx={{mt: 2}}>
+            Much of the designs and ideas of this site are shamelessly stolen from {" "}
+            <ATag href="taniarascia.com/">Tania Rascia</ATag>
+            , who generously made her beautiful website open source. Go check her out!
+        </Typography>
         </>
     )
 }
@@ -121,13 +127,9 @@ const MyTimeLine = () => {
                     Web-based card game
                     <br/>
                     <Typography variant="caption">
-                        <a
-                            style={{color: "inherit", textDecoration: "none"}}
-                            href="https://kyrosiberia.net/"
-                            target="_blank"
-                            rel="noreferrer">
-                            <u>https://kyrosiberia.net/</u>
-                        </a>
+                        <ATag href="https://kyrosiberia.net/">
+                            https://kyrosiberia.net/
+                        </ATag>
                     </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
@@ -177,13 +179,8 @@ const MyTimeLine = () => {
                     Research Assistant
                     <br/>
                     <Typography variant="caption">
-                        <a 
-                            style={{color: "inherit", textDecoration: "none"}}
-                            href="https://tinyurl.com/4unsf9tf"
-                            target="_blank"
-                            rel="noreferrer">
-                            <u>Paper</u>
-                        </a> published at SPIE 2021
+                    <ATag href="https://tinyurl.com/4unsf9tf">Paper</ATag>{" "}
+                    published at SPIE 2021
                     </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
@@ -226,6 +223,18 @@ const MyTimeLine = () => {
                 </TimelineContent>
             </TimelineItem>
         </Timeline>
+    )
+}
+
+const ATag = (props) => {
+    return (
+        <a 
+            style={{color: "inherit", textDecoration: "none"}}
+            href={props.href}
+            target="_blank"
+            rel="noreferrer">
+            <u>{props.children}</u>
+        </a>
     )
 }
 
