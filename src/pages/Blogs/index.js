@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 const Blogs = ({ data }) => {
     return (
@@ -16,9 +16,12 @@ const Blogs = ({ data }) => {
         {
             data.allMarkdownRemark.edges.map(({node}) => (
                 <article key={node.id}>
-                    <h2>{node.frontmatter.title}</h2>
+                    <h2>
+                        <Link to={`/Blogs/${node.fields.slug}`}>
+                        {node.frontmatter.title}
+                        </Link>
+                    </h2>
                     <p>Posted: {node.frontmatter.date}</p>
-                    <div dangerouslySetInnerHTML={{ __html: node.html }}/>
                 </article>
             ))
         }
@@ -37,7 +40,9 @@ export const query = graphql`
                         date(formatString: "MMMM D, YYYY")
                     }
                     id
-                    html
+                    fields {
+                        slug
+                    }
                 }
             }
         }
