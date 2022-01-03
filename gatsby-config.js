@@ -6,6 +6,14 @@ module.exports = {
             {
                 icon: 'src/assets/favicon.png',      
             }
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: 
+            {
+              name: `content`,
+              path: `${__dirname}/content`,
+            }
         }
     ],
 };
