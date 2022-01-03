@@ -22,7 +22,7 @@ export const RootWrapper = (props) => {
             <SideBar/>
             <TopBar changeTheme={changeTheme} dark={dark}/>
             <BottomBar/>
-            <Paper elevation={9} square sx={{pt:15, pl:6, pb:5,flexGrow:1, minHeight:"100vh"}}>
+            <Paper elevation={9} square sx={{pt:10, pl:6, pb:5,flexGrow:1, minHeight:"100vh"}}>
                 <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
                     {props.children}
                 </Box>

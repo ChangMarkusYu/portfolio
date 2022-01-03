@@ -9,6 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import FeedIcon from '@mui/icons-material/Feed';
 
 const iconSize = 30;
 
@@ -55,6 +56,10 @@ export const SideBar = () => {
                 popperText="Projects" 
                 IconComponent={ArchitectureIcon} 
                 to="/Projects"/>
+            <SideBarIconButton 
+                popperText="Blogs" 
+                IconComponent={FeedIcon} 
+                to="/Blogs"/>
         </Stack>
         <Stack sx={{mb:1}}>
             <SideBarIconButton 
