@@ -1,5 +1,4 @@
 import React from "react";
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { styled } from "@mui/system";
@@ -16,7 +15,6 @@ const MePhoto = styled('img')({
 const AboutMe = () => {
     return(
         <>
-        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
         <Typography variant="h4" align="center" sx={{mb: 1}}>
             <b>About me</b>
         </Typography>
@@ -83,7 +81,6 @@ const AboutMe = () => {
             </Typography>
             </Stack>
         </ul>
-        </Box>
         </>
     )
 }

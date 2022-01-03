@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -22,7 +21,6 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 const Home = () => {
     return(
         <>
-        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
         <Typography variant="h3" align="justify" sx={{mb: 3}}>
             <b>Hi, I'm Chang Yu.</b>
         </Typography>
@@ -66,7 +64,6 @@ const Home = () => {
         </Stack>
         <Typography variant="h4" sx={{mt: 8}}><b>My Timeline</b></Typography>
         <MyTimeLine/>
-        </Box>
         </>
     )
 }

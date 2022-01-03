@@ -150,7 +150,6 @@ const ProjectGridItem = ({project}) => {
 const Projects = () => {    
     return(
         <>
-        <Box sx={{marginRight:"auto", marginLeft:"auto", maxWidth:"800px"}}>
             <Typography variant="h4" align="center" sx={{mb: 1}}>
                 <b>Projects</b>
             </Typography>
@@ -167,7 +166,6 @@ const Projects = () => {
                 })
             }
         </Grid>
-        </Box>   
         </>
     )
 }
