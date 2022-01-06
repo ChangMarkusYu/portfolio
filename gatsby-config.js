@@ -22,7 +22,8 @@ module.exports = {
                 plugins: [
                     {
                         resolve: `gatsby-remark-prismjs`,
-                        options: {
+                        options: 
+                        {
                             // Class prefix for <pre> tags containing syntax highlighting;
                             // defaults to 'language-' (e.g. <pre class="language-js">).
                             // If your site loads Prism into the browser at runtime,
@@ -46,6 +47,13 @@ module.exports = {
                             // Add additional HTML escapes by providing a mapping
                             // of HTML entities and their escape value IE: { '}': '&#123;' }
                             escapeEntities: {},
+                        },
+                    },
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: 
+                        {
+                            maxWidth: 800,
                         },
                     },
                 ],
