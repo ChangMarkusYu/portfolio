@@ -1,6 +1,8 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
 import { Link, graphql } from 'gatsby'
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 const Blogs = ({ data }) => {
     return (
@@ -12,20 +14,18 @@ const Blogs = ({ data }) => {
             Silly things that I wrote
         </Typography>
 
-        <ul>
+        <Stack direction="column">
         {
             data.allMarkdownRemark.edges.map(({node}) => (
-                <article key={node.id}>
-                    <h2>
-                        <Link to={`/Blogs/${node.fields.slug}`}>
-                        {node.frontmatter.title}
-                        </Link>
-                    </h2>
-                    <p>Posted: {node.frontmatter.date}</p>
-                </article>
+                <Button variant="text" key={node.id} color="inherit" component={Link} to={`/Blogs/${node.fields.slug}`}>
+                    <Stack flexGrow={1} direction="row" justifyContent="space-between">
+                        <Typography variant="body1">{node.frontmatter.title}</Typography>
+                        <Typography variant="caption">{node.frontmatter.date}</Typography>
+                    </Stack>
+                </Button>
             ))
         }
-        </ul>
+        </Stack>
         </>
     )
 }
@@ -37,7 +37,7 @@ export const query = graphql`
                 node {
                     frontmatter {
                         title
-                        date(formatString: "MMMM D, YYYY")
+                        date(formatString: "MMM DD, YYYY")
                     }
                     id
                     fields {
