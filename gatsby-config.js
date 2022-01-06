@@ -11,10 +11,11 @@ module.exports = {
             resolve: "gatsby-source-filesystem",
             options: 
             {
-              name: `content`,
-              path: `${__dirname}/content`,
+                name: `content`,
+                path: `${__dirname}/content`,
             }
         },
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-transformer-remark`,
             options: 
