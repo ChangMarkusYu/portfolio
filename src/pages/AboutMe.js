@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { styled } from "@mui/system";
 import WorkplacePhoto from '../assets/workplace.jpg'
+import { Helmet } from "react-helmet";
 
 const MePhoto = styled('img')({
     width: "80%",
@@ -15,6 +16,9 @@ const MePhoto = styled('img')({
 const AboutMe = () => {
     return(
         <>
+        <Helmet>
+            <title>About | Chang Yu</title>
+        </Helmet>
         <Typography variant="h4" align="center" sx={{mb: 1}}>
             <b>About me</b>
         </Typography>

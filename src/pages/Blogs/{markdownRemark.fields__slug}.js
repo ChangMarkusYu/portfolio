@@ -1,12 +1,16 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
 import { graphql } from 'gatsby'
+import { Helmet } from "react-helmet";
 
 const Post = ({ data }) => {
     const node = data.markdownRemark;
 
     return (
     <>
+    <Helmet>
+        <title>{node.frontmatter.title} | Chang Yu</title>
+    </Helmet>
     <Typography variant="h4" align="center" sx={{mb: 1}}>
         <b>{node.frontmatter.title}</b>
     </Typography>

@@ -17,10 +17,14 @@ import BiotechIcon from '@mui/icons-material/Biotech';
 import WorkIcon from '@mui/icons-material/Work';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     return(
         <>
+        <Helmet>
+            <title>Home | Chang Yu</title>
+        </Helmet>
         <Typography variant="h3" align="justify" sx={{mb: 3}}>
             <b>Hi, I'm Chang Yu.</b>
         </Typography>

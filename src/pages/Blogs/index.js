@@ -3,10 +3,14 @@ import Typography from '@mui/material/Typography';
 import { Link, graphql } from 'gatsby'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { Helmet } from "react-helmet";
 
 const Blogs = ({ data }) => {
     return (
         <>
+        <Helmet>
+            <title>Blogs | Chang Yu</title>
+        </Helmet>
         <Typography variant="h4" align="center" sx={{mb: 1}}>
             <b>Blogs</b>
         </Typography>

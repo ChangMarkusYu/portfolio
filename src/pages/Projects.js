@@ -6,6 +6,7 @@ import { styled } from "@mui/system";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { IconButtonWithPopper } from "../components/IconButtonWithPopper"
+import { Helmet } from "react-helmet";
 
 const ProjectList = [
     {
@@ -149,6 +150,9 @@ const ProjectGridItem = ({project}) => {
 const Projects = () => {    
     return(
         <>
+            <Helmet>
+                <title>Projects | Chang Yu</title>
+            </Helmet>
             <Typography variant="h4" align="center" sx={{mb: 1}}>
                 <b>Projects</b>
             </Typography>
