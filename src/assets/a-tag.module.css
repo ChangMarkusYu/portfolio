@@ -1,0 +1,7 @@
+/**
+ * Turn off the annoying purple color
+ */
+a {
+    color : inherit;
+    text-decoration: underline;
+}

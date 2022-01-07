@@ -2,6 +2,7 @@ import React from "react";
 import Typography from '@mui/material/Typography';
 import { graphql } from 'gatsby'
 import { Helmet } from "react-helmet";
+import "../../assets/a-tag.module.css"
 
 const Post = ({ data }) => {
     const node = data.markdownRemark;

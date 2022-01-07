@@ -18,6 +18,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { Helmet } from "react-helmet";
+import "../assets/a-tag.module.css"
 
 const Home = () => {
     return(
@@ -233,11 +234,10 @@ const MyTimeLine = () => {
 const ATag = (props) => {
     return (
         <a 
-            style={{color: "inherit", textDecoration: "none"}}
             href={props.href}
             target="_blank"
             rel="noreferrer">
-            <u>{props.children}</u>
+            {props.children}
         </a>
     )
 }
