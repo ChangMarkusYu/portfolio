@@ -72,7 +72,7 @@ const Home = () => {
         <Typography variant="h5" sx={{mt: 8}}><b>Acknowledgement</b></Typography>
         <Typography variant="body1" align="justify" sx={{mt: 2}}>
             Much of the designs and ideas of this site are shamelessly stolen from {" "}
-            <ATag href="taniarascia.com/">Tania Rascia</ATag>
+            <ATag href="https://www.taniarascia.com/">Tania Rascia</ATag>
             , who generously made her beautiful website open source. Go check her out!
         </Typography>
         </>
