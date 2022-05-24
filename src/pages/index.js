@@ -88,6 +88,10 @@ const MyTimeLine = () => {
                     align="right"
                     variant="body2">
                     Software Engineer Intern
+                    <br/>
+                    <Typography variant="caption">
+                        Ads Copy Service Team
+                    </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
