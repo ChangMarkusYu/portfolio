@@ -15,7 +15,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import SchoolIcon from '@mui/icons-material/School';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import WorkIcon from '@mui/icons-material/Work';
-import ArchitectureIcon from '@mui/icons-material/Architecture';
+import GoogleIcon from '@mui/icons-material/Google';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { Helmet } from "react-helmet";
 import "../assets/a-tag.module.css"
@@ -87,20 +87,20 @@ const MyTimeLine = () => {
                     sx={{ m: 'auto 0' }}
                     align="right"
                     variant="body2">
-                    Built with Material UI
+                    Software Engineer Intern
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector/>
                         <TimelineDot variant="outlined">
-                            <ArchitectureIcon/>
-                            </TimelineDot>
+                            <GoogleIcon/>
+                        </TimelineDot>
                     <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                     <Typography variant="h6" component="span">
-                    Portfolio Site
+                    Google
                     </Typography>
-                    <Typography>Sep 2021 - Present</Typography>
+                    <Typography>May 2022 - Present</Typography>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
@@ -122,33 +122,6 @@ const MyTimeLine = () => {
                     Georgia Tech
                     </Typography>
                     <Typography>Aug 2021 - Dec 2022</Typography>
-                </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-                <TimelineOppositeContent 
-                    sx={{ m: 'auto 0' }}
-                    align="right"
-                    variant="body2">
-                    Web-based card game
-                    <br/>
-                    <Typography variant="caption">
-                        <ATag href="https://kyrosiberia.net/">
-                            https://kyrosiberia.net/
-                        </ATag>
-                    </Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                    <TimelineConnector/>
-                        <TimelineDot variant="outlined">
-                            <SportsEsportsIcon/>
-                            </TimelineDot>
-                    <TimelineConnector/>
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                    <Typography variant="h6" component="span">
-                    Online Solitare
-                    </Typography>
-                    <Typography>Aug 2020 - May 2021</Typography>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
