@@ -16,7 +16,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import WorkIcon from '@mui/icons-material/Work';
 import GoogleIcon from '@mui/icons-material/Google';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { Helmet } from "react-helmet";
 import "../assets/a-tag.module.css"
 
@@ -37,7 +36,7 @@ const Home = () => {
         </Typography>
         <Stack direction="row" spacing={2} sx={{mt:3}} >
             <Button 
-                href="https://www.dropbox.com/s/8vd4jvhs3lq7ydt/CV_Chang%20Yu.pdf?dl=0"
+                href="https://www.dropbox.com/s/szj93yfjgneoih0/Resume_Chang_Yu.pdf?dl=0"
                 target="_blank"
                 rel="noreferrer"
                 variant="outlined" 
