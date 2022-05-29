@@ -30,7 +30,7 @@ const Home = () => {
         </Typography>
         <Typography variant="h6" align="justify">
             I'm a <b>MSCS</b> student at <b>Georgia Tech</b>. 
-            I enjoy full stack web development, building open-source projects,
+            I enjoy system programming, full stack web development,
             and playing around with Linux. My interests and skills span many
             areas of software engineering.
         </Typography>
