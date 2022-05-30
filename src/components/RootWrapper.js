@@ -10,21 +10,10 @@ import { DarkTheme, LightTheme } from "./Theme"
 import { createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
-export const Layout = (props) => {
-    let theme = localStorage.getItem("theme");
-    if(theme === undefined) {
-        theme = false;
-    }
-    else {
-        theme = Boolean(parseInt(theme))
-    }
-    
-    const [dark, setDark] = useState(theme);
+export const RootWrapper = (props) => {
+    const [dark, setDark] = useState(true);
     const changeTheme = () => {
-        const new_dark = !dark;
-        setDark(new_dark);
-        const val = new_dark ? "1" : "0";
-        localStorage.setItem("theme", val);
+        setDark(!dark);
     }
 
     return (
