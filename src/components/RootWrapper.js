@@ -11,10 +11,20 @@ import { createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
 export const RootWrapper = (props) => {
-    const [dark, setDark] = useState(true);
+    let theme = false; // default to light theme
+    if(typeof window !== 'undefined') {
+        const item = localStorage.getItem("theme");
+        if(item !== undefined) {
+            theme = Boolean(parseInt(item));
+        }
+    }
+
+    const [dark, setDark] = useState(theme);
     const changeTheme = () => {
-        setDark(!dark);
-        typeof window !== 'undefined' && window.localStorage.setItem("theme", dark.toString());
+        const newDark = !dark;
+        setDark(newDark);
+        typeof window !== 'undefined' 
+            && window.localStorage.setItem("theme", newDark ? "1" : "0");
     }
 
     return (
