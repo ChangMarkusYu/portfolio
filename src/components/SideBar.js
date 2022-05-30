@@ -73,7 +73,7 @@ export const SideBar = () => {
             <SideBarIconButton 
                 popperText="Email me" 
                 IconComponent={EmailIcon} 
-                href="malto:marcus.yu.56@gmail.com"/>
+                href="mailto:marcus.yu.56@gmail.com"/>
         </Stack>
         </Drawer>
         </>
