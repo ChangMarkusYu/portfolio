@@ -11,14 +11,16 @@ import { createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
 export const RootWrapper = (props) => {
-    const [dark, setDark] = useState(false); // default to light theme
+    const [dark, setDark] = useState(undefined);
 
     useEffect(() => {
         if(typeof window !== 'undefined') {
             const item = localStorage.getItem("theme");
-            console.log(item);
             if(item) {
                 setDark(Boolean(parseInt(item)));
+            }
+            else {
+                setDark(false); // default to light theme
             }
         }
     }, []);
@@ -30,7 +32,7 @@ export const RootWrapper = (props) => {
             && window.localStorage.setItem("theme", newDark ? "1" : "0");
     }
 
-    return (
+    return ( dark !== undefined && 
     <CssBaseline>
         <ThemeProvider theme={dark ? createTheme(DarkTheme) : createTheme(LightTheme)}>
             <SideBar/>
