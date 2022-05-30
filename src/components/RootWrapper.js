@@ -14,6 +14,7 @@ export const RootWrapper = (props) => {
     const [dark, setDark] = useState(true);
     const changeTheme = () => {
         setDark(!dark);
+        typeof window !== 'undefined' && window.localStorage.setItem("theme", dark.toString());
     }
 
     return (
