@@ -1,5 +1,5 @@
 import React from "react"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { SideBar } from "./SideBar";
 import { TopBar } from "./TopBar";
@@ -12,12 +12,16 @@ import Paper from "@mui/material/Paper";
 
 export const RootWrapper = (props) => {
     const [dark, setDark] = useState(false); // default to light theme
-    if(typeof window !== 'undefined') {
-        const item = localStorage.getItem("theme");
-        if(item !== undefined) {
-            setDark(Boolean(parseInt(item)));
+
+    useEffect(() => {
+        if(typeof window !== 'undefined') {
+            const item = localStorage.getItem("theme");
+            console.log(item);
+            if(item) {
+                setDark(Boolean(parseInt(item)));
+            }
         }
-    }
+    }, []);
 
     const changeTheme = () => {
         const newDark = !dark;
