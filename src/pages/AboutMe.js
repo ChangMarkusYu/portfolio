@@ -28,7 +28,7 @@ const AboutMe = () => {
         <Typography variant="body1" align="justify" sx={{mb:4}}>
         I am a graduate student of the MSCS program of Georgia Institute of Technology. 
         I am interested in web development, software engineering, and operating systems.
-        I am currently looking for internship opportunities in Summer 2022.
+        I am currently working at Google as a Software Engineer Intern.
         </Typography>
         <Typography variant="h5" align="left" sx={{my:2}}>
         <b>My skills</b>
@@ -68,19 +68,16 @@ const AboutMe = () => {
             <Stack direction="column" spacing={1}>
             <Typography variant="body1" align="left">
                 <li>
-                    Read up about <em>Godot</em> game engine, and try to contribute to the projects.
-                    I plan to start by fixing issues tagged with "junior jobs" 
-                    aka begginer friendly.
+                    Submit my first Linux kernel patch.
                 </li>
                 <li>
                     Add mobile support for this site.
                 </li>
                 <li>
-                    Start a blog section on this site and write down my experience and
-                    findings in my future journey in programming.
+                    Add Search Engine Optimization (SEO) for this site.
                 </li>
                 <li>
-                    Survive GaTech and find a job
+                    Survive Georgia Tech and find a full-time position
                 </li>
             </Typography>
             </Stack>
