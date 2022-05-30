@@ -1,5 +1,5 @@
 import React from "react"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { SideBar } from "./SideBar";
 import { TopBar } from "./TopBar";
@@ -11,9 +11,20 @@ import { createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
 export const RootWrapper = (props) => {
-    const [dark, setDark] = useState(true);
+    let theme = localStorage.getItem("theme");
+    if(theme === undefined) {
+        theme = false;
+    }
+    else {
+        theme = Boolean(parseInt(theme))
+    }
+    
+    const [dark, setDark] = useState(theme);
     const changeTheme = () => {
-        setDark(!dark);
+        const new_dark = !dark;
+        setDark(new_dark);
+        const val = new_dark ? "1" : "0";
+        localStorage.setItem("theme", val);
     }
 
     return (
