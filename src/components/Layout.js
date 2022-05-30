@@ -1,5 +1,5 @@
 import React from "react"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { SideBar } from "./SideBar";
 import { TopBar } from "./TopBar";
@@ -10,29 +10,21 @@ import { DarkTheme, LightTheme } from "./Theme"
 import { createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
-// Check if window is defined (so if in the browser or in node.js).
-const isBrowser = typeof window !== "undefined"
-
-export const RootWrapper = (props) => {
-    let theme = false;
-    if(isBrowser) {
-        theme = localStorage.getItem("theme");
-        if(theme === undefined) {
-            theme = false;
-        }
-        else {
-            theme = Boolean(parseInt(theme))
-        }
+export const Layout = (props) => {
+    let theme = localStorage.getItem("theme");
+    if(theme === undefined) {
+        theme = false;
     }
-
+    else {
+        theme = Boolean(parseInt(theme))
+    }
+    
     const [dark, setDark] = useState(theme);
     const changeTheme = () => {
         const new_dark = !dark;
         setDark(new_dark);
         const val = new_dark ? "1" : "0";
-        if(isBrowser) {
-            localStorage.setItem("theme", val);
-        }
+        localStorage.setItem("theme", val);
     }
 
     return (
