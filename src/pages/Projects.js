@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 
 const ProjectList = [
     {
-        title: "NORP [In Progress]",
+        title: "NORP",
         tagline: "Media center for non-profit organization data",
         site: "http://norp.cc.gatech.edu/",
         video: "https://www.dropbox.com/sh/s1klixmiqw9749o/AAC1oh9JAoqCIC93CA0-i3NSa?dl=0",
