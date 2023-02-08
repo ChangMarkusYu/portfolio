@@ -23,12 +23,12 @@ const AboutMe = () => {
             <b>About me</b>
         </Typography>
         <Typography variant="h6" align="center" sx={{mb: 5}}>
-            Student, Developer, Average Linux Fan
+            Developer, Average Linux Fan, Student
         </Typography>
         <Typography variant="body1" align="justify" sx={{mb:4}}>
-        I am a graduate student of the MSCS program of Georgia Institute of Technology. 
+        I am currently working at Google as a Software Engineer.
         I am interested in web development, software engineering, and operating systems.
-        I am currently working at Google as a Software Engineer Intern.
+        I graduated from Vanderbilt University and Georgia Institute of Technology.
         </Typography>
         <Typography variant="h5" align="left" sx={{my:2}}>
         <b>My skills</b>
@@ -68,7 +68,7 @@ const AboutMe = () => {
             <Stack direction="column" spacing={1}>
             <Typography variant="body1" align="left">
                 <li>
-                    Submit my first Linux kernel patch.
+                    <s>Submit my first Linux kernel patch.</s>
                 </li>
                 <li>
                     Add mobile support for this site.
@@ -77,7 +77,7 @@ const AboutMe = () => {
                     Add Search Engine Optimization (SEO) for this site.
                 </li>
                 <li>
-                    Survive Georgia Tech and find a full-time position
+                    <s>Survive Georgia Tech and find a full-time position</s>
                 </li>
             </Typography>
             </Stack>

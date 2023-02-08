@@ -86,6 +86,31 @@ const MyTimeLine = () => {
                     sx={{ m: 'auto 0' }}
                     align="right"
                     variant="body2">
+                    Software Engineer
+                    <br/>
+                    <Typography variant="caption">
+                        Ads Copy Service Team
+                    </Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                    <TimelineConnector/>
+                        <TimelineDot variant="outlined">
+                            <GoogleIcon/>
+                        </TimelineDot>
+                    <TimelineConnector/>
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: '12px', px: 2 }}>
+                    <Typography variant="h6" component="span">
+                    Google
+                    </Typography>
+                    <Typography>Feb 2023 - Present</Typography>
+                </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+                <TimelineOppositeContent 
+                    sx={{ m: 'auto 0' }}
+                    align="right"
+                    variant="body2">
                     Software Engineer Intern
                     <br/>
                     <Typography variant="caption">
@@ -103,7 +128,7 @@ const MyTimeLine = () => {
                     <Typography variant="h6" component="span">
                     Google
                     </Typography>
-                    <Typography>May 2022 - Present</Typography>
+                    <Typography>May 2022 - Aug 2022</Typography>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
