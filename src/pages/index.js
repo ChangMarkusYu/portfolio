@@ -29,7 +29,7 @@ const Home = () => {
             <b>Hi, I'm Chang Yu.</b>
         </Typography>
         <Typography variant="h6" align="justify">
-            I'm a <b>MSCS</b> student at <b>Georgia Tech</b>. 
+            I'm a software engineer at Google. 
             I enjoy system programming, full stack web development,
             and playing around with Linux. My interests and skills span many
             areas of software engineering.
